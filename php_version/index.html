@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<title>Aparecida Nutrição</title>
+	</head>
+	<body>
+
+		<header>
+				<h1 class="titulo">Aparecida Nutrição</h1>
+			</div>
+		</header>
+		<main>
+			<section class="container">
+				<h2>Meus pacientes</h2>
+				<label for="busca">Buscar paciente</label>
+				<input type="search" name="busca" id="buscar-paciente" placeholder="Digite o nome do paciente">
+				<table class="tabela">
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Peso(kg)</th>
+							<th>Altura(m)</th>
+							<th>Gordura Corporal(%)</th>
+							<th>IMC</th>
+						</tr>
+					</thead>
+					<tbody id="tabela-pacientes">
+						
+					</tbody>
+				</table>
+			</section>
+			<section class="caixa-formulario" >
+				<form id="adiciona-paciente">
+					<ul id="mensagens-erros"></ul>
+					<span id="paciente-adicionado-com-sucesso"></span>
+					<div class="div-nome">
+						<label for="nome">Nome</label>
+						<input type="text" name="nome" id="nome" placeholder="João silva" required>
+					</div>
+					<div class="div-peso">
+						<label for="peso">Peso</label>
+						<input type="number" name="peso" id="peso" placeholder="80" required>
+					</div>
+					<div class="div-altura">
+						<label for="altura">Altura</label>
+						<input type="number" name="altura" id="altura" placeholder="1.80" required>
+					</div>
+					<div class="div-gordura">
+						<label for="gordura-corporal"> % Gordura</label>
+						<input type="number" name="gordura" id="gordura-corporal" placeholder="%10" required>
+					</div>
+					<div class="div-button">
+						<button class="envia" >Adicionar</button>
+					</div>
+				</form>
+			</section>
+		</main>
+		<script src="main.js"></script>
+	</body>
+</html>
