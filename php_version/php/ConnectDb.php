@@ -40,4 +40,11 @@
         private function setDb($d){
             $this->db = $d;
         }
+
+        function __contruct($u,$h,$p,$d){
+            $this->setUser($u);
+            $this->setHost($h);
+            $this->setPasswd($p);
+            $this->setDb($d);
+        }
     }
