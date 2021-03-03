@@ -7,7 +7,7 @@
         private $db;
 
         protected function connection(){
-            $conect = mysqli_connect($this->getUser(),$this->getHost(),$this->getPasswd(),$this->getDb());
+            $conect = mysqli_connect($this->getHost(),$this->getUser(),$this->getPasswd(),$this->getDb()) or die (mysqli_connect_error());
             return $connect;
         }
         protected function ExecDb($query){
@@ -41,7 +41,7 @@
             $this->db = $d;
         }
 
-        function __contruct($u,$h,$p,$d){
+        function __construct($u,$h,$p,$d){
             $this->setUser($u);
             $this->setHost($h);
             $this->setPasswd($p);

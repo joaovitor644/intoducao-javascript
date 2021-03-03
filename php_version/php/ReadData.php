@@ -6,7 +6,7 @@ class ReadData implements Interface_ReadData{
     private $callDb;
     private $data;
 
-    private function requestData(){
+     function requestData(){
         $result = $this->getcallDb()->ExecDb("select * from clients;");
         if(!mysqli_num_rows($result)){
             return false;
@@ -21,7 +21,7 @@ class ReadData implements Interface_ReadData{
     private function getCallDb(){
         return $this->callDb;
     }
-    private function getData(){
+    public function getData(){
         return $this->data;
     }
 

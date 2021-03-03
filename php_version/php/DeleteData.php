@@ -5,7 +5,7 @@
         private $requestDeleteData;
         protected $callDb;
 
-        private function deleteData(){
+        public function deleteData(){
             $this->getCallDb()->ExecDb("delete from clients where nome = {$this->getRequestDeleteData()}");
         }
 
@@ -21,5 +21,10 @@
         }
         private function setCallDb($c){
             $this->callDb = $c;
+        }
+
+        function __construct($c,$r){
+            $this->setCallDb($c);
+            $this->setRequestDeleteData($r);
         }
     }

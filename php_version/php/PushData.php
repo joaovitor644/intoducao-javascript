@@ -10,7 +10,7 @@ class PushData implements Interface_PushData{
     private $gorduraCorp;
     private $imc;
 
-    private function sendData(){
+    public function sendData(){
         $query = "insert into clients (nome,peso,altura,gorduraCorp,imc) values ({$this->getNome()},{$this->getPeso()},{$this->getAltura()},{$this->getGorduraCorp()},{$this->getImc()});";
 
         $this->getCallDb()->ExecDb($query);
